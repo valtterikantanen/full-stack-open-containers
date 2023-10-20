@@ -1,0 +1,9 @@
+services:
+  app:
+    image: todo-frontend
+    container_name: todo-frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000

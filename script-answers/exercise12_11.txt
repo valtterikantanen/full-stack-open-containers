@@ -1,0 +1,21 @@
+Script started on 2023-09-09 21:02:55+03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="166" LINES="20"]
+valtteri@thinkpad:~$ docker exec -it todo-backend-redis-1 redis-cli
+127.0.0.1:6379> KEYS *
+1) "addedTodos"
+127.0.0.1:6379> GET addedTodos
+"2"
+127.0.0.1:6379> SET addedTodos 9001
+OK
+127.0.0.1:6379> GET addedTodos
+"9002"
+127.0.0.1:6379> DEL addedTodos
+(integer) 1
+127.0.0.1:6379> GET addedTodos
+"1"
+127.0.0.1:6379> GET addedTodos
+"2"
+127.0.0.1:6379> exit
+valtteri@thinkpad:~$ exit
+exit
+
+Script done on 2023-09-09 21:05:25+03:00 [COMMAND_EXIT_CODE="0"]
